@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+pnpm-lock.yaml
+
+# Vite build output
+dist/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local environment files
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Cache files
+.pnpm-store/
+.cache/
