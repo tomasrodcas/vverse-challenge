@@ -8,11 +8,15 @@ WORKDIR /app
 COPY Pipfile Pipfile.lock ./
 RUN pip install pipenv && pipenv install --system
 
-# Copy the rest of the app
 COPY . .
+COPY entrypoint.sh /app/entrypoint.sh
+
+# Give execution permission
+RUN chmod +x /app/entrypoint.sh
+
 
 # Expose Flask port
 EXPOSE 5000
 
 # Run Flask app
-ENTRYPOINT ["sh", "./entrypoint.sh"]
+ENTRYPOINT ["sh", "entrypoint.sh"]
